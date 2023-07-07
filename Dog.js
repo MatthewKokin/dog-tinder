@@ -8,6 +8,7 @@ class Dog {
     constructor(data) {
         Object.assign(this, data)
         this.html = function () {
+            profileHTML=""
             profileHTML += `
                 <img src="${this.avatar}" class="profile-pic" width="100%">
                 <div class="info">
