@@ -1,0 +1,161 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+html{
+    background: #E9E9EA;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 550px;
+    height: 973px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Header */
+header{
+    display: flex;
+    width: 550px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile{
+    width: 32.325927734375px;
+    height: 34px;
+    color: #DCE1E7;
+    margin-left: 18px;
+}
+
+.logo{
+    width: 84px;
+    height: 42px;
+    border-radius: 30px;
+}
+
+.chat{
+    width: 34px;
+    height: 34px;
+    color: #DCE1E7;
+    margin-right: 18px;
+}
+
+
+
+/* Rendered section */
+.container-main{
+    width: 550px;
+    height: 892px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Rendering profile */
+.render{
+    position: relative;
+    width: 534px;
+    height: 751.4431762695312px;
+    align-self: end;
+    display: block;
+    margin: 0 auto 25px auto;
+}
+.profile-pic{
+    border-radius: 15px;
+}
+
+.info{
+    border: 1px solid green;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto 16.4px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    height: 115px;
+    width: 500px;
+    color: #F8F8F8;
+}
+
+.headline{
+    margin-top: 0;
+    width: 158.78px;
+    height: 36.40px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 32px;
+}
+
+.description{
+    font-weight: 400;
+    margin-top: 7px;
+    font-size: 24px;
+    margin-bottom: 0px; 
+}
+
+.decision{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 55px;
+    margin-left: 5px;
+    width: 234px;   
+    height: 116px;
+    transform: rotate(330deg);
+    margin-left: 20px;
+}
+
+
+/* Bottom */
+
+.container-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-btn, .unlike-btn{
+    cursor: pointer;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 0.01px solid #E9E9EA;
+    display: flex;
+    box-shadow: 0 10px 20px #E9E9EA;
+}
+
+.like-btn{
+    margin-right: 25px;
+}
+.like-btn img{
+    margin: auto;
+}
+
+.unlike-btn img{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.like-btn:hover{
+    background: #DBFFF4;
+    box-shadow: 0 10px 20px #CCF1E6;
+}
+
+.unlike-btn:hover{
+    background: #FFE7EF;
+    box-shadow: 0 10px 20px #EDD9DF;
+}
+
