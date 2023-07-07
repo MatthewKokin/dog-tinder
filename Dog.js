@@ -3,6 +3,7 @@
 import { dogs } from "./data.js"
 
 let profileHTML = ""
+let matches = 0
 
 class Dog {
     constructor(data) {
@@ -21,22 +22,28 @@ class Dog {
 }
 
 function renderNewDog(){
-    const notSwiped = dogs.filter(dog => !dog.hasBeenLiked)
-    console.log(notSwiped)
-    let randomNum = Math.floor(Math.random() * notSwiped.length)
-    console.log(randomNum)
-    const pickedDog = notSwiped[randomNum]
-    let dog = new Dog(pickedDog)
-    pickedDog.hasBeenLiked = !pickedDog.hasBeenLiked
-    console.log(pickedDog.hasBeenLiked)
-    dog.html()
+    const notSwiped = dogs.filter(dog => !dog.hasBeenLiked);
+    if(notSwiped.length > 0){
+        let randomNum = Math.floor(Math.random() * notSwiped.length);
+        const pickedDog = notSwiped[randomNum];
+        let dog = new Dog(pickedDog);
+        pickedDog.hasBeenLiked = !pickedDog.hasBeenLiked;
+        dog.html();
+    }else{
+        let profileHTML = `
+        <div class="end">
+        <h1>No profiles left.<br>🥲</h1>
+        <p>You have ${matches} total matches</p>
+        </div>`
+        document.getElementById("render").innerHTML = profileHTML;
+        document.getElementById("like-btn").classList.add('disabled');
+        document.getElementById("unlike-btn").classList.add('disabled');
+    }
 }
 
-function decision(){
-    
-}
 
 function liked(){
+    matches += 1
     profileHTML += `
     <img src="/images/badge-like.png" class="decision">`;
     document.getElementById("render").innerHTML = profileHTML;
@@ -49,4 +56,4 @@ function disliked(){
 }
 
 
-export {Dog, renderNewDog,liked, disliked}
+export {renderNewDog,liked, disliked}

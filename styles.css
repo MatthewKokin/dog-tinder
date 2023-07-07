@@ -158,3 +158,24 @@ header{
     box-shadow: 0 10px 20px #EDD9DF;
 }
 
+.end{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50%;
+}
+
+.end h1{
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.end p{
+    margin-top: 0;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}

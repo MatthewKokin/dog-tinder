@@ -1,6 +1,5 @@
 ({plugins: ['jsdom-quokka-plugin']})
-import {dogs} from "./data.js"
-import {Dog, renderNewDog, liked, disliked} from "./Dog.js"
+import {renderNewDog, liked, disliked} from "./Dog.js"
 
 
 renderNewDog()
