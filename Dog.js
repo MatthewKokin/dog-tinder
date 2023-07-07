@@ -21,8 +21,14 @@ class Dog {
 }
 
 function renderNewDog(){
-    let randomNum = Math.floor(Math.random() * 3);
-    let dog = new Dog(dogs[randomNum])
+    const notSwiped = dogs.filter(dog => !dog.hasBeenLiked)
+    console.log(notSwiped)
+    let randomNum = Math.floor(Math.random() * notSwiped.length)
+    console.log(randomNum)
+    const pickedDog = notSwiped[randomNum]
+    let dog = new Dog(pickedDog)
+    pickedDog.hasBeenLiked = !pickedDog.hasBeenLiked
+    console.log(pickedDog.hasBeenLiked)
     dog.html()
 }
 
