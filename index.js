@@ -1,20 +1,17 @@
 ({plugins: ['jsdom-quokka-plugin']})
 import {dogs} from "./data.js"
-import {Dog} from "./Dog.js"
+import {Dog, renderNewDog, liked, disliked} from "./Dog.js"
 
-function renderNewDog(){
-    let randomNum = Math.floor(Math.random() * 3);
-    let dog = new Dog(dogs[randomNum])
-    dog.html()
-}
 
 renderNewDog()
 
-document.getElementsByClassName("container-bottom")[0].addEventListener("click", function(e){
-    if(e.target.id ==="like-btn"){
-        console.log("like")
-    }
-    else if(e.target.id ==="unlike-btn"){
-        console.log("unlike")
-    }
-})
+document.getElementById("like-btn").addEventListener("click", function(e){
+    console.log("like");
+    liked()
+
+});
+
+document.getElementById("unlike-btn").addEventListener("click", function(e){
+    console.log("unlike");
+    disliked()
+});
