@@ -2,7 +2,19 @@
 import {dogs} from "./data.js"
 import {Dog} from "./Dog.js"
 
-let test = new Dog(dogs[0])
+function renderNewDog(){
+    let randomNum = Math.floor(Math.random() * 3);
+    let dog = new Dog(dogs[randomNum])
+    dog.html()
+}
 
-test.html()
+renderNewDog()
 
+document.getElementsByClassName("container-bottom")[0].addEventListener("click", function(e){
+    if(e.target.id ==="like-btn"){
+        console.log("like")
+    }
+    else if(e.target.id ==="unlike-btn"){
+        console.log("unlike")
+    }
+})
