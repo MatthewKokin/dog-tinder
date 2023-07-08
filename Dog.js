@@ -1,5 +1,3 @@
-// Create the Dog class here
-({plugins: ['jsdom-quokka-plugin']})
 import { dogs } from "./data.js"
 
 let profileHTML = ""
