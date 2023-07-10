@@ -79,7 +79,7 @@ header{
     margin: auto auto 16.4px 12px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: end;
     align-items: flex-start;
     height: 115px;
     width: 500px;
